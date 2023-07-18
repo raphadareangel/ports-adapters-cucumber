@@ -26,13 +26,13 @@ Run the example of connecting to OpenFin and creating applications
 
 ## POSTMAN COLLECTION
 
-Postman collection file is in resources folder /adapters/src/main/resources/ZARA DEMO RAFAEL V3 Adapter-port.postman_collection.json
+Postman collection file is in resources folder /zara-adapters/src/main/resources/ZARA DEMO RAFAEL V5 Adapter-port-cucumber.postman_collection.json
 
 ```JSON
-   {
+{
 	"info": {
-		"_postman_id": "9958d1b3-2e53-4996-98fb-6b5de89d9d4b",
-		"name": "ZARA DEMO RAFAEL V3 Adapter-port",
+		"_postman_id": "2a621e6e-a415-4e8d-93f4-f98be64457ab",
+		"name": "ZARA DEMO RAFAEL V5 Adapter-port-cucumber",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "8449707"
 	},
@@ -53,7 +53,7 @@ Postman collection file is in resources folder /adapters/src/main/resources/ZARA
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \n  \"name\": \"Zara\"\n}"
+							"raw": "{\n  \n  \"name\": \"Nike\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/brand",
@@ -82,7 +82,7 @@ Postman collection file is in resources folder /adapters/src/main/resources/ZARA
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \n  \"name\": \"Belt\"\n}"
+							"raw": "{\n  \n  \"name\": \"soccer-ball\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/product",
@@ -111,7 +111,7 @@ Postman collection file is in resources folder /adapters/src/main/resources/ZARA
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"startDate\": \"2023-07-01T10:00:00\",\n  \"endDate\": \"2023-07-31T23:59:59\",\n  \"priceList\": \"Summer Sale\",\n  \"priority\": 1,\n  \"price\": 25.99,\n  \"currency\": \"USD\",\n  \"brand\": {\n    \"id\": 2,\n    \"name\": \"zara\"\n  },\n  \"product\": \n    {\n      \"id\": 2,\n      \"name\": \"Belt\"\n    }\n  \n}"
+							"raw": "{\n  \"startDate\": \"2023-07-01T10:00:00\",\n  \"endDate\": \"2023-07-31T23:59:59\",\n  \"priceList\": \"Summer Sale\",\n  \"priority\": 1,\n  \"price\": 25.99,\n  \"currency\": \"USD\",\n  \"brand\": {\n    \"id\": 2,\n    \"name\": \"nike\"\n  },\n  \"product\": \n    {\n      \"id\": 2,\n      \"name\": \"soccer-ball\"\n    }\n  \n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/pricing",
