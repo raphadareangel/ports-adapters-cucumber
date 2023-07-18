@@ -70,20 +70,16 @@ public class PricingServiceImpl implements PricingService{
 		pricingRepository.deleteById(id);
 	}
 
+	// query optimized using lambda
 	@Override
 	public List<Pricing> getPriceListBaseOnDate(Long productId, Long brandId, LocalDateTime inputDate) {
-		List<Pricing> output = new ArrayList<>();
-		Product product = productService.getProductById(productId);
-		Brand brand = brandService.getBrandById(brandId);
+	    Product product = productService.getProductById(productId);
+	    Brand brand = brandService.getBrandById(brandId);
 
-		List<Pricing> pricings = brand.getPrices();
-		for (Pricing p : pricings) {
-			if (p.getProduct().getId().equals(product.getId()) && p.getStartDate().isBefore(inputDate)
-					&& p.getEndDate().isAfter(inputDate)) {
-				output.add(p);
-			}
-		}
-
-		return output;
+	    return brand.getPrices().stream()
+	            .filter(p -> p.getProduct().getId().equals(product.getId()) &&
+	                    p.getStartDate().isBefore(inputDate) &&
+	                    p.getEndDate().isAfter(inputDate)).toList();
+	            
 	}
 }
